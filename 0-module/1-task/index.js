@@ -1,6 +1,9 @@
 function sum(m, n) {
-    alert(m + n);
+    return m + n;
 }
 
-sum (1, 1);
-sum (2, 5);
+let result = sum(1, 1);
+    result1 = sum(2, 5);
+
+alert (result);
+alert (result1);
