@@ -3,7 +3,7 @@ function sum(m, n) {
 }
 
 let result = sum(1, 1);
-    result1 = sum(2, 5);
+let result1 = sum(2, 5);
 
 alert (result);
 alert (result1);
