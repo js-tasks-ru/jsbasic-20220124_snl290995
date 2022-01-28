@@ -29,13 +29,16 @@ function sayHello() {
   sayHello();
 
 
-function ucFirst(str) {
-    let string = str.toUpperCase();
-    alert(string);
-}
-
-ucFirst('вася');
-ucFirst('');
+  function ucFirst(str) {
+    if (!str) 
+      return str;
+     else {
+      return str.charAt(0).toUpperCase() + string.slice(1);
+    }
+  };
+  
+  ucFirst('вася');
+  ucFirst('');
 
 function checkSpam(strr) {
     let name = strr.toLowerCase();
