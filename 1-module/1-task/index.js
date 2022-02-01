@@ -12,6 +12,6 @@ function factorial(n) {
     };
 };
 
-alert(factorial(1));
-alert(factorial(0));
-alert(factorial(6));
+(factorial(1));
+(factorial(0));
+(factorial(6));

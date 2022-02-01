@@ -7,7 +7,7 @@ function checkSpam(str) {
     };
 };
 
-alert(checkSpam('1XBeT now'));
-alert(checkSpam('free xxxxx'));
-alert(checkSpam('innocent rabbit')); 
+(checkSpam('1XBeT now'));
+(checkSpam('free xxxxx'));
+(checkSpam('innocent rabbit')); 
 

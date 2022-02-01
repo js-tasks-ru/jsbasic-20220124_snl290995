@@ -1,6 +1,6 @@
 function truncate(str, maxlength) {
   if (str.length > maxlength) {
-    str =str.substring(0, maxlength) + String.fromCharCode(8230);
+    str =str.substring(0, maxlength-1) + String.fromCharCode(8230);
     return str;
   } else {
     return str;

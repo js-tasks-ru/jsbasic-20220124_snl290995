@@ -1,14 +1,33 @@
 'use strict'
 
+/**
+ * Эту функцию трогать не нужно
+ */
+ function print(text) {
+  console.log(text);
+}
+
+/**
+ * Эту функцию нужно поменять так,
+ * чтобы функция sayHello работала корректно
+ * @param {string | null} name
+ * @returns {boolean}
+ */
+function isValid(name) {
+  return Boolean(name) && !name.includes(' ') && name.length >=4;
+}
+
+/**
+ * Эту функцию трогать не нужно
+ */
 function sayHello() {
   let userName = prompt('Введите ваше имя');
 
-  if ( userName=='' || userName == null || userName.length < 4) {
-      alert('Некорректное имя');
+  if (isValid(userName)) {
+    print(`Welcome back, ${userName}!`);
   } else {
-    alert(`Welcome back, ${userName}!`)  
+    print('Некорректное имя');
   }
 }
 
 sayHello();
-
