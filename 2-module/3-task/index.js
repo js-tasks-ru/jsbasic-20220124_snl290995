@@ -1,5 +1,6 @@
 'use strict'
 
+
 let calculator = {
    read : function(a, b) {
     this.a = a;
