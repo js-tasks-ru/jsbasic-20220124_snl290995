@@ -15,7 +15,7 @@ function sumSalary(salaries) {
     for (let key in salaries) {
       let isSalary = typeof salaries[key] === 'number';
 
-      if (isSalary) {
+      if (isSalary && Number.isFinite(salaries[key])) {
         sumOfSalaries += salaries[key];
       }
     }
@@ -23,8 +23,7 @@ function sumSalary(salaries) {
 }
 
 
-let result = sumSalary(salaries);
-alert(result);
+
 
 
 
