@@ -26,7 +26,6 @@ function initCarousel() {
   function rigthWay() {
     currentSlideNumber += 1; 
     let offset = -carouselInnerElem.offsetWidth * currentSlideNumber;
-    let arrowRigth = document.querySelector('.carousel__arrow_right');
       carouselInnerElem.style.transform = `translateX(${offset}px)`;
 
       update();
