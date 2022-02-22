@@ -11,6 +11,8 @@ function highlight(table) {
               }
               else if(statusCell.dataset.available === "true") {
                   row.classList.add('available');
+              } else {
+                row.classList.add('unavailable');
               }
               
               const genderCell = row.getElementsByTagName('td')[2];
