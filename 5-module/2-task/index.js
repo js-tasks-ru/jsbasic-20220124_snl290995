@@ -6,8 +6,8 @@ function toggleText() {
       function toggleText1() {
         let text = document.querySelector('div');
         text.classList.add('tok');
-        document.getElementsByClassName('.tok')[0].style = "display: none";
-        text.classList.toggle('tok');
+        let classWord = document.querySelector('.tok')
+        classWord.toggleAttribute('hidden');
       }
    }
 
