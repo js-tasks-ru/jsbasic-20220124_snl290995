@@ -44,8 +44,10 @@ export default class Carousel {
               let left = arrowLeft.addEventListener('click', leftWay);
               let rigth = arrowRigth.addEventListener('click', rigthWay);
 
+              arrowLeft.style.display = 'none';
+
               function update() {
-                if (currentSlideNumber == 3) {
+                if (currentSlideNumber == carouselInnerElem.children.length - 1) {
                     arrowRigth.style.display = 'none';
                 } else {
                   arrowRigth.style.display = '';
@@ -76,9 +78,11 @@ export default class Carousel {
 
     let buttonAdd = this.elem.querySelector('.carousel__button');
 
-    buttonAdd.addEventListener('click', () => {
+    this.elem.addEventListener('click', (event) => {
+      if (!event.target.closest('.carousel__button')) return;
+
       const productaddEvent = new CustomEvent('product-add', {
-        detail: buttonAdd.closest('.carousel__slide').dataset.id,
+        detail: event.target.closest('[data-id]').dataset.id,
         bubbles: true
       });
       this.elem.dispatchEvent(productaddEvent);
